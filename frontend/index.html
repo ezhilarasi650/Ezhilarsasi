@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Library Book Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <center>
+  <div class="container">
+    <h1>Library Book Management</h1>
+
+    <section class="form-section">
+      <h2 id="form-title">Add Book</h2>
+      <form id="book-form">
+        <input type="hidden" id="book-id" />
+        <div><input id="title" placeholder="Title" required /></div><br>
+        <div><input id="author" placeholder="Author" /></div><br>
+        <div><input id="isbn" placeholder="ISBN" /></div><br>
+        <div><input id="year" placeholder="Year" type="number" /></div><br>
+        <div><input id="copies" placeholder="Copies" type="number" min="0" value="1" /></div>
+        <div class="buttons"><br>
+          <button type="submit" id="save-btn">Save</button>
+          <button type="button" id="cancel-btn" class="secondary">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="search-row">
+        <input id="search" placeholder="Search by title, author or ISBN" />
+        <button id="search-btn">Search</button>
+        <button id="refresh-btn" class="secondary">Refresh</button>
+      </div>
+      <ul id="books-list"></ul>
+    </section>
+  </div>
+  </center>
+
+  <script src="app.js"></script>
+</body>
+</html>
